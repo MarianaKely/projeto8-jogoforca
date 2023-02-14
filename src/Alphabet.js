@@ -27,3 +27,4 @@ const alfabeto = [
     "z",
   ];
   
+  export default alfabeto;
