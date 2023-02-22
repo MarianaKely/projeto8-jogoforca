@@ -14,6 +14,8 @@ export default function Thegame({
     setPositioninthegame,
     boxoferrors,
     SetBoxoferrors,
+    photo,
+    setPhoto,
     setDisabledkey,
     showit,
     setShowit,
@@ -38,12 +40,12 @@ export default function Thegame({
         const arraypositioning = Math.floor(Math.random() * wordarray.length)
         selectplayedword = wordarray[arraypositioning]
         arrayofselectplayedword = selectplayedword.split("")
-        arrayofselectplayedword.forEach(() => {displaynoneselectplayedword.push(" _ ")})
+        arrayofselectplayedword.forEach(() => {displaynoneselectplayedword.push(" _")})
 
     }
 
  // it shuffle words and choose from list - end //
-
+ 
  
  // words config - outset //
 
@@ -51,7 +53,7 @@ export default function Thegame({
 
         setPositioninthegame("")
         SetBoxoferrors(0);
-       
+        setPhoto(boxoferrors);
         raffleword()
         setDisabledkey(false)
         setShowit(displaynoneselectplayedword)
@@ -66,14 +68,16 @@ export default function Thegame({
  
 // words config - end //
 
-
  // page layout settings -outset //
 
     return(
         
         <div className="gamebox">
-                <div className="buttonbox">
-                    <div className="word-chose-button">
+                <div className="photobox">
+                <img  data-test="game-image" src={`./assets/forca${photo ? boxoferrors : boxoferrors}.png`}></img>
+                </div>
+                <div className="bigbuttonbox">
+                    <div className="buttonbox">
                         <button data-test="choose-word" onClick={wordtime}>Escolher Palavra</button>
                     </div>
                     <div  className="randombox">            

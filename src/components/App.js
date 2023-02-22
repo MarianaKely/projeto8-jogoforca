@@ -29,11 +29,12 @@ export default  function App() {
   const [drawn, setDrawn] = useState ("")
   const [selectedinarray, setSelectedinarray] = useState(catchword)
   const [wordarray] = useState(palavras) 
-     
+  const [photo, setPhoto] = useState(boxoferrors);
+   
   // constants that enable functionalities on the Thegame.js - end//
 
   return (
-    // creation configuration of Letters.js - outset //
+    // creation configuration of Letters.js and The game.js - outset //
     <div className='container'>
       
       <Thegame
@@ -42,8 +43,10 @@ export default  function App() {
         setChooseyouroption = {setChooseyouroption}
         setIndividualkeyselected = {setIndividualkeyselected}
         setPositioninthegame = {setPositioninthegame}
+        setPhoto = {setPhoto}
         SetBoxoferrors={SetBoxoferrors}
         positioninthegame = {positioninthegame}
+        photo = {photo}
         boxoferrors = {boxoferrors}
         setChooseit = {setChooseit}
         wordarray = {wordarray}
