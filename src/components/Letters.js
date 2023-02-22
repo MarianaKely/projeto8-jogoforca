@@ -1,5 +1,5 @@
 
-// page that configures the keyboard letters - outset //
+// page that configures the keyboard letters and game end - outset //
 
 import alfabeto from "../Alphabet"
 
@@ -98,8 +98,9 @@ export default function Letters(
         </>
 
     )
+    
 // page layout settings -end //
     
 }
 
-// page that configures the keyboard letters - end //
+// page that configures the keyboard letters and game end - end //

@@ -1,7 +1,8 @@
 import React from 'react'
 import {useState} from "react"
 import Letters from "./Letters"
-
+import Thegame from "./Thegame"
+import palavras from "../palavras"
 
 export default  function App() {
 
@@ -17,17 +18,50 @@ export default  function App() {
   const [showit, setShowit] = React.useState('')
   const [disabledkey, setDisabledkey] = useState(true)
   const [displayfocus, setDisplayfocus] = useState([]) 
-  const [keysonscreen, setKeysonscreen] = React.useState('button-key-inactive')
+  const [keysonscreen, setKeysonscreen] = React.useState('off')
   const [gotitright, setGotitright] = React.useState([])
 
   // constants that enable functionalities on the Letters.js - end//
 
+  // constants that enable functionalities on the Thegame.js - outset//
+
+  const [catchword,setCatchword ] = useState(Math.floor(Math.random() * palavras.length)) 
+  const [drawn, setDrawn] = useState ("")
+  const [selectedinarray, setSelectedinarray] = useState(catchword)
+  const [wordarray] = useState(palavras) 
+     
+  // constants that enable functionalities on the Thegame.js - end//
 
   return (
     // creation configuration of Letters.js - outset //
     <div className='container'>
       
-    
+      <Thegame
+        drawn = {drawn}
+        setDrawn = {setDrawn}
+        setChooseyouroption = {setChooseyouroption}
+        setIndividualkeyselected = {setIndividualkeyselected}
+        setPositioninthegame = {setPositioninthegame}
+        SetBoxoferrors={SetBoxoferrors}
+        positioninthegame = {positioninthegame}
+        boxoferrors = {boxoferrors}
+        setChooseit = {setChooseit}
+        wordarray = {wordarray}
+        informationscreen = {informationscreen}
+        SetInformationscreen = {SetInformationscreen}
+        chooseit = {chooseit}
+        setDisplayfocus = {setDisplayfocus}
+        setSelectedinarray = {setSelectedinarray}
+        catchword = {catchword}
+        setDisabledkey = {setDisabledkey}
+        disabledkey = {disabledkey}
+        selectedinarray = {selectedinarray}
+        keysonscreen ={keysonscreen}
+        setKeysonscreen={setKeysonscreen}
+        displayfocus={displayfocus}
+        showit={showit}
+        setShowit={setShowit}>
+      </Thegame>
       <Letters
         individualkeyselected = {individualkeyselected}
         setIndividualkeyselected = {setIndividualkeyselected}
