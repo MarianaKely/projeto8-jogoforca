@@ -60,7 +60,19 @@ export default function Letters(
         }
     }
 
+    if (boxoferrors === 6){
+        setShowit(result);
+        setPositioninthegame("DERROTA");
+        setDisabledkey(true);
+        setChooseyouroption(true);
 
+    // more than six the player loses //    
+
+    }else if(resultanalysis.toString() === result.toString()){
+        setPositioninthegame("VITÓRIA");
+        setDisabledkey(true);
+        setChooseyouroption(true);
+    }
     }
 
   // area of ​​analysis of attempts/responses and configuration of errors - end // 
