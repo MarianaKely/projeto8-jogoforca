@@ -9,7 +9,7 @@ export default  function App() {
   // constants that enable functionalities on the Letters.js - outset//
 
   const [individualkeyselected, setIndividualkeyselected] = React.useState([])
-  const [informationscreen, SetInformationscreen] = useState([])
+  const [informationscreen, setInformationScreen] = useState([])
   const [chooseit, setChooseit] = useState([])
   const [resultanalysis] = useState([])  
   const [boxoferrors, SetBoxoferrors] = useState(0) 
@@ -51,7 +51,7 @@ export default  function App() {
         setChooseit = {setChooseit}
         wordarray = {wordarray}
         informationscreen = {informationscreen}
-        SetInformationscreen = {SetInformationscreen}
+        setInformationScreen = {setInformationScreen}
         chooseit = {chooseit}
         setDisplayfocus = {setDisplayfocus}
         setSelectedinarray = {setSelectedinarray}
@@ -69,7 +69,7 @@ export default  function App() {
         individualkeyselected = {individualkeyselected}
         setIndividualkeyselected = {setIndividualkeyselected}
         informationscreen = {informationscreen}
-        SetInformationscreen={SetInformationscreen}
+        setInformationScreen={setInformationScreen}
         chooseit = {chooseit}
         resultanalysis = {resultanalysis}
         boxoferrors = {boxoferrors}
